@@ -1,0 +1,74 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/_login.css")
+        link(rel="stylesheet", href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css", integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p", crossorigin="anonymous")
+        title Gustuni | login
+    body 
+        <!-- header -->
+        .main-header 
+            .logo  stuni
+                span
+            .side-nav.d-flex.items-center
+                span Follow us on -
+                .social-links 
+                    a(class="s-links", href="", target="_blank") 
+                        i(class="fab fa-facebook-f")
+                    a(class="s-links", href="", target="_blank") 
+                        i(class="fab fa-instagram")
+                    a(class="s-links", href="", target="_blank") 
+                        i(class="fab fa-twitter")
+                    a(class="s-links", href="", target="_blank") 
+                        i(class="fab fa-github") 
+                 
+              
+
+        .container 
+        
+            .side-note 
+                img(src="/images/acess_account.svg", class="ace", alt="")
+            .log-container    
+                .logbox 
+                    form(action="/register", method="POST")
+                        legend Gustuni
+                        .-msg.text-center A new home for all Kenyan musicians, get your money where your mouth is
+
+                        .speak Security Credentials
+                        .d-flate
+                            .inputBox.column 
+                                label(for='nationalID') Nation ID*
+                                input(type="number",name="nationalID",placeholder="National ID") 
+
+                            .inputBox.column 
+                                label(for='number') Phone Number*
+                                input(type="number",name="number" placeholder="Phone Number")
+                        .d-flate
+                            .speak Account info
+                            .inputBox.column
+                                label(for="uname") What do we call you ?
+                                input(type="text",name="uname" placeholder="Your name")
+                                .subtitle-text This name will appear everywhere.
+                            .inputBox.column
+                                label(for="email")  
+                                input(type="email",name="email" placeholder="What's your email") 
+                                .subtitle-text  This email will remain private.
+                            .inputBox.column
+                                label(for="passwd")
+                                input(type="password", name='passwd',placeholder="Your password") 
+                                .subtitle-text should not be shorter than 6 characters
+                        
+                        .subtitle-text.m-2.text-center By clicking on sign-up, you agree to Spotify's Terms and Conditions of Use
+
+                        button(type="submit", class="congress") Join The Team
+                    .action-buttons 
+                        span Already have and Account ?    
+                            a(href='/sign-in') Login 
+
+                    
+
+        
+            <!-- header -->
+

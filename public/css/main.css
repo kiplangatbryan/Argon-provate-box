@@ -1,0 +1,250 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans CJK JP";
+    color: #414364;
+}
+
+.logo{
+    font-size: 30px;
+    position: relative;
+}
+
+.logo::after{
+    content: "";
+    position: absolute;
+    left: -8%;
+    top: -10%;
+    height: 30px;
+    width: 13px;
+    border-radius: 10px;
+    background: aqua;
+    z-index: -1;
+    opacity: .3;
+}
+.logo::before{
+    content: "";
+    position: absolute;
+    left: -15%;
+    top: 10%;
+    height: 30px;
+    width: 13px;
+    border-radius: 10px;
+    background: brown;
+    z-index: -1;
+    opacity: .3;
+}
+
+
+.main-container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    padding: 1.5em 0;
+}
+
+.container{
+    position: absolute;
+    right: 0;
+    padding: 1.5em 8em 0 1em;
+    left: 300px;
+    top: 0;
+}
+.d-flex{
+    display: flex;
+    gap: 2em;
+}
+
+.sub-header .user-pitch{
+    display: flex;
+    margin-left: 1em;
+}
+
+.sub-header .user-pitch .drop-down i{
+    margin-left: .5em;
+} 
+
+.sub-header .user-pitch .avatar{
+    padding: 3px 5px;
+    background: #000;
+    border-radius: 3px; 
+    color: #fff;
+    font-weight: 800;
+    margin-right: .5em;
+}
+
+.sub-header{
+    display: flex;
+    height: 14vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.side-nav{
+    display: flex;
+    align-items: center;
+}
+
+.side-nav a{
+    margin-left: 1em;
+}
+
+.hero-section{
+    background: rgb(0,0,0,.3);
+    border-radius: 30px;
+    padding: 3em 2em;
+    display: flex;
+    position: relative;
+    margin: 2em 0;
+}
+
+.hero-section .rim1{
+    flex: 0 0 70%;
+}
+
+.preview {
+    margin-top: -2em;
+    padding: 2em 0;
+    border-radius: 30px;
+}
+
+.preview .main-card{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 1.8em;
+    border-radius: 10px;
+    background: #00b18e6b;
+    
+}
+
+/* .preview .main-card .icon{
+    color: #00b18f;
+}
+ */
+
+.preview .main-card .icon{
+    padding: .3em 1em;
+    background: rgb(0,0,0,.1);
+    display: flex;
+    align-items: center; 
+    border-radius: 8px;
+    margin-right: 10px;
+    background: #00b18f;
+
+    
+}
+
+.preview .main-card .icon i{
+   font-size: 20px;
+    opacity: .6;
+}
+
+.text-h1{
+    font-size: 30px;
+    margin-bottom: .3em;
+}
+
+.hero-section img{
+    position: absolute;
+    right: 2em;
+    bottom: 0%;
+    width: 300px;
+}
+
+.dashboard{
+    position: absolute;
+    left: 0;
+    width: 300px;
+    padding-left: 5em;
+}
+
+.to-action{
+    margin: 3em 0;
+}
+.call-to-action{
+    display: block;
+    padding: 1em;
+    background: rgb(0,0,0,.2);
+    border-radius: 30px;
+    text-decoration: none;
+    margin-right: 1.5em; 
+}
+
+.call-to-action i{
+    font-size: 40px;
+}
+
+.router{
+    text-decoration: none;
+    display: block;
+    padding: 10px 10px;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    
+}
+.router i{
+    margin-right: 1em;
+}
+
+
+
+
+/* profile css */
+
+.inputBox input{
+    border: none;
+    background: none;
+    padding: 8px 6px;
+    border-radius: 4px;
+    border: 1px solid grey;
+
+}
+.secondary-text{
+    font-size: 22px;
+    opacity: .6;
+}
+.m-2{
+    margin-top: 10px;
+}
+.subtitle-text{
+    font-size: 14px;
+    margin-bottom: .5em;
+}
+
+.inputBox label{
+    margin-bottom: 10px;
+}
+.inputBox textarea{
+    border-radius: 8px;
+    border: none;
+    border: 1px solid grey;
+    padding: 8px 6px;
+}
+.inputBox textarea:focus{
+    outline: none;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-btn{
+    margin: 2em 0;
+    border: none;
+    background: none;
+    padding: 10px 20px;
+    background: #00b18f;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+}
+
+/* upload styles */
+
+
+.logBox{
+    margin-top: 1em;
+}

@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans CJK JP";
+    color: #414364;
+}
+.d-flex{
+    display: flex;
+}
+
+.logo {
+    position: relative;
+}
+
+.log::after{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #000;
+    left: 0;
+}
+
+
+.items-center{
+    align-items: center;
+}
+.main-header a{
+    text-decoration: none;
+    margin-left: 1em;
+}
+.main-header{
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6em;
+}
+.side-nav span{
+    font-size: 14px;
+}
+.container{
+    display: flex;
+    min-height: 93vh;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+.side-note{
+    flex: 0 0 50%;
+    max-height: 93vh;
+    background: linear-gradient(-180deg, rgb(236, 110, 25), transparent) no-repeat;
+    position: relative;
+}       
+
+.side-note img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.log-container {
+    height: 93vh;
+    flex: 0 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.logbox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}   
+.logbox .inputBox{
+    margin: 1em 0;
+}
+
+.logbox .inputBox input{
+    border: none;
+    background: none;
+    padding: 8px 6px;
+    border-radius: 4px;
+    border: 1px solid grey;
+
+}
+.logbox legend{
+    font-size: 30px;
+}
+.logbox .-msg{
+    margin-bottom: 2em;
+}
+.logbox .forgot{
+    display: block;
+    font-size: 14px;
+    margin: 1em  0;
+    text-align: right;
+}
+.logbox .congress{
+    border: unset;
+    padding: .5em 3em;
+    background: #414364;
+    color: #fff;
+    border-radius: 8px; 
+    cursor: pointer;
+    
+}
+.logbox .action-buttons{
+    margin-top: 2em;
+}
+
+.error{
+    padding: 1em;
+    background-color: #f1481e63;
+    color: #f1481e;
+}

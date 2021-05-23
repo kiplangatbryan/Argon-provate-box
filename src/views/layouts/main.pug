@@ -1,0 +1,62 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/main.css")
+        link(rel="stylesheet", href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css", integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p", crossorigin="anonymous")
+        title Gustuni | login
+    body 
+        <!-- header -->
+
+        .main-container 
+            .dashboard 
+                .logo  stuni
+                
+                .to-action 
+                    a(class='d-flex items-center call-to-action', href="/new-stuni")
+                        div Create  New Pitch 
+                        i(class="fa fa-plus-circle")
+
+                .side-dash 
+                    a(class="router", href="/") 
+                        i(class="fab fa-atlassian")
+                        span Overview
+                    a(class="router", href="/editor") 
+                        i(class="fa fa-search-location")
+                        span Preview
+                    a(class="router", href="/settings") 
+                        i(class="fa fa-cog")
+                        span Settings  
+                    a(class="router", href="/profile") 
+                        i(class="fa fa-user")
+                        span Profile              
+                    
+
+        .container 
+            .sub-header
+                .sub-title
+                    .text-h1 #{content}
+                    .date 
+                        span.highlight Monday 
+                        span 02 March 2020   
+
+                .side-nav 
+                    a(class="a-tag", href="") 
+                        i(class="fa fa-envelope")
+                    a(class="a-tag", href="") 
+                        i(class="fa fa-bell")
+                    .user-pitch
+                        span.avatar AJ
+                        .drop-down 
+                            span #{user}
+                            i(class="fa fa-angle-down")
+            block content
+     
+
+               
+
+                        
+
+

@@ -1,0 +1,65 @@
+extends layouts/main.pug
+block content
+    .logBox 
+        form(action="/new-stuff", method="POST", enctype="multipart/form-data") 
+
+            .secondary-text.m-2 General Information 
+            .subtitle-text Track information
+            
+            .inputBox.column.m-2
+                label(for="type") Type of song
+                select(name="type" id="type-select", required)
+                    option(value="single") single
+                    option(value="album") Album 
+
+            .inputBox.column.m-2
+                label(for="genre") What type of Genre
+                select(name="genre" id="genre-select", required)
+                    option(value="") genre
+                    option(value="gengetone") gengetone
+                    option(value="raggae") Raggae 
+                    option(value="gospel") Gospel 
+                    option(value="zilizopendwa") Zilizopendwa  
+
+
+        
+            .inputBox.column.m-2
+                label(for="track_name") What's the name track/album ? 
+                input(type="text" ,name="track_name", required)
+                .subtitle-text choose a name for the song
+
+            .inputBox.column.m-2
+                label(for="wallpaper") Track wallpaper
+                input(type="file", name="wallpaper")
+                .subtitle-text This will appear every time the song is played
+            .inputBox.column.m-2
+                label(for="track") Track 
+                input(type="file", name="track")
+                .subtitle-text This is the actual song you want to publish
+
+            .secondary-text.m-2 Components 
+            .subtitle-text Do you wanna price some of the song componets
+
+            
+            .inputBox.column.m-2
+                label(for='acapella') Track Acapella
+                input(type="file", name="acapella")
+                .subtitle-text rough audio song types: mp3, wav, mp4, ogg
+
+
+
+            .inputBox.column.m-2
+                label(for="beat") Track Beat
+                input(type="file", name="beat")
+                .subtitle-text file types: mp3, wav, mp4, ogg
+
+
+
+            button.submit-btn(type="submit") Upload
+
+
+               
+
+                        
+
+

@@ -1,0 +1,47 @@
+extends layouts/main.pug
+block content
+    .hero-section 
+        .rim1 
+            .text-h1 Hi, Jane
+            .text-1 Ready to start your day some pitch decks 
+        .img 
+            img(src="/images/locate.svg", alt="")
+
+    .text-h1 Public Profile
+    .accout-form 
+        form(action="/account-update", method="post")
+            .secondary-text Account
+            .subtitle-text sensitive info here be careful
+            .d-flex 
+                .inputBox.column
+                    label Name
+                    input(type="text",name="name", value="Jane Doe", )
+                .inputBox.column
+                    label Your email
+                    input(type="email",name="email", value="Janedoe@gmail.com")
+            .secondary-text.m-2 General 
+            .subtitle-text Lets get to know you better
+            .inputBox.column
+                label Location
+                input(type="email",value="", name="location")
+            .inputBox.column
+                label Bio
+                textarea(name="bio", cols="20", rows="6")
+            .d-flex 
+                .inputBox.column
+                    label Twitter Username
+                    input(type="email",value="", name="twitter")
+                .inputBox.column
+                    label Instagram username
+                    input(type="email",value="", name="instagram") 
+            
+
+            button.submit-btn(type="submit") Update profile 
+
+
+
+               
+
+                        
+
+

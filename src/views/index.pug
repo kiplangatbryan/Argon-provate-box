@@ -1,0 +1,32 @@
+extends layouts/main.pug
+block content
+    .hero-section 
+        .rim1 
+            .text-h1 Hi, #{user}
+            .text-1 Ready to start your day some pitch decks 
+        .img 
+            img(src="/images/locate.svg", alt="")
+
+
+    .preview 
+        .text-h1 Overview 
+            
+        .d-flex 
+            .main-card 
+                .icon 
+                    i(class="fa fa-chart-pie")
+                .message    
+                    h2 83%
+                    p sales
+            .main-card 
+                .icon 
+                    i(class="fa fa-chart-pie")
+                .message    
+                    h2 91
+                    p views
+            .main-card 
+                .icon 
+                    i(class="fa fa-chart-pie")
+                .message    
+                    h2 10k 
+                    p followers
