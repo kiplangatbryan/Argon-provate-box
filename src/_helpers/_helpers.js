@@ -48,7 +48,17 @@ config = [
 ]
 fileHandler = fileMachine.fields(config)
 
+function errorHandler (err, req, res, next) {
+  if (res.headersSent) {
+    return next(err)
+  }
+  console.log(err.message)
+  res.status(500)
+  res.render('error', { error: err })
+}
+
+
 module.exports = {
-    fileHandler
+    fileHandler, errorHandler
 }
 

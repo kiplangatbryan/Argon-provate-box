@@ -1,8 +1,9 @@
 extends layouts/main.pug
 block content
+    include layouts/top-bar.pug
     .hero-section 
         .rim1 
-            .text-h1 Hi, #{user}
+            .text-h1 Hi, #{user.username}
             .text-1 Ready to start your day some pitch decks 
         .img 
             img(src="/images/locate.svg", alt="")
@@ -14,19 +15,27 @@ block content
         .d-flex 
             .main-card 
                 .icon 
-                    i(class="fa fa-chart-pie")
+                    i(class="fa fa-star")
                 .message    
-                    h2 83%
-                    p sales
-            .main-card 
+                    h2 #{user.stats.listens}
+                    p Record listens
+            .main-card.follow
                 .icon 
-                    i(class="fa fa-chart-pie")
+                    i(class="fa fa-users")
                 .message    
-                    h2 91
-                    p views
-            .main-card 
-                .icon 
-                    i(class="fa fa-chart-pie")
-                .message    
-                    h2 10k 
+                    h2 #{ user.stats.followers.length}
                     p followers
+            .main-card.following
+                .icon 
+                    i(class="fa fa-user-friends")
+                .message    
+                    h2 #{ user.stats.following.length}
+                    p following
+            .main-card.uploads
+                .icon 
+                    i(class="fab fa-stars")
+                .message    
+                    h2 #{ user.stats.following.length}
+                    p uploads
+    .preview 
+        .text-h1 Recent Activity

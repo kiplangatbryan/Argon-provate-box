@@ -1,0 +1,45 @@
+extends layouts/main.pug
+block content
+    include layouts/top-bar.pug
+    .hero-section 
+        .rim1 
+            .text-h1 Stuni Manager
+            .text-1 Analyse how each track performs
+        .img 
+            img(src="/images/locate.svg", alt="")
+
+
+    .text-h1.m-3 Track perfomance
+    .preview 
+        each item in items
+            .item-card.d-flex
+                .type-hover #{item.type}
+                .img-card 
+                    img(src="/images/locate.svg", alt="")
+                    .title 
+                        .text-h1 #{item.title}
+                .stats.d-flex.fix-wrap
+                    .main-card.focus 
+                        .icon 
+                            i(class="fa fa-star")
+                        .message    
+                            h2 98
+                            p Record listens
+                    .main-card.focus
+                        .icon 
+                            i(class="fa fa-signal")
+                        .message    
+                            h2 88
+                            p followers
+                    .main-card.focus
+                        .icon 
+                            i(class="fa fa-star")
+                        .message    
+                            h2 10k 
+                            p following
+
+
+            
+
+
+            

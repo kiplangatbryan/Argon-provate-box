@@ -6,6 +6,10 @@ var session_store = require('connect-mongodb-session')(session);
 const mongoose = require('mongoose')
 const flash = require('express-flash')
 
+// user defined imports
+const User = require('./Models/User')
+const { errorHandler } = require('./_helpers/_helpers')
+const  protection  = require('./_helpers/_protect')
 
 
 // settings
@@ -14,8 +18,9 @@ app.use(express.static('public'))
 app.set('view engine', 'pug')
 app.set('views', 'src/views')
 app.use(express.urlencoded({ extended: false }))
-
 app.use(flash())
+// set images available
+app.use('/uploads', protection, express.static('uploads'))
 
 // config
 const local_uri = "mongodb://localhost:27017/stuni"
@@ -35,8 +40,6 @@ const sess = {
 }
 app.use(session(sess))
 
-// user defined imports
-const User = require('./Models/User')
 
 // define routes 
 const { auth, main } = require('./routes')
@@ -45,7 +48,9 @@ app.use(async (req, res, next) => {
    if (!req.session.user) {
       return next()
    }
-   try {
+  try {
+      console.log('passed here')
+     
       const user = await User.findById(req.session.user._id)
       req.user = user
       next()
@@ -56,20 +61,9 @@ app.use(async (req, res, next) => {
    }
 })
 
-
 app.use(auth)
 app.use(main)
 
-
-
-function errorHandler (err, req, res, next) {
-  if (res.headersSent) {
-    return next(err)
-  }
-  console.log(err.message)
-  res.status(500)
-  res.render('error', { error: err })
-}
 app.use(errorHandler)
 
 mongoose.connect(local_uri, {

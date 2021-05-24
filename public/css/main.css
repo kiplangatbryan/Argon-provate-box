@@ -5,6 +5,9 @@
     font-family: "Noto Sans CJK JP";
     color: #414364;
 }
+body{
+    background: whitesmoke;
+}
 
 .logo{
     font-size: 30px;
@@ -21,7 +24,7 @@
     border-radius: 10px;
     background: aqua;
     z-index: -1;
-    opacity: .3;
+    opacity: .3;.
 }
 .logo::before{
     content: "";
@@ -61,17 +64,69 @@
     margin-left: 1em;
 }
 
+.sub-header .user-pitch .drop-down{
+    position: relative;
+}
+.sub-header .user-pitch .drop-nav{
+    position: absolute;
+    bottom: -200px;
+    right: 0;
+    padding: 1px 2px;
+    border-radius: 8px;
+     z-index: 150;
+    background: #fff;
+    box-shadow: -3px 10px 10px rgb(0,0,0,.3), 3px -8px 10px rgb(0,0,0,.1)
+}
+.sub-header .user-pitch .drop-nav::before{
+    z-index: -1;
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    transform: rotate(-45deg);
+    background: red;
+    top: -10px;
+    left: 55px;
+        
+}
+
+.sub-header .user-pitch .drop-nav .attach i{
+       margin-right: 10px;
+}
+
+.sub-header .user-pitch .drop-nav .logout{
+    border: 1px solid;
+}
+.sub-header .user-pitch .drop-nav .attach{
+    margin: unset;
+    text-decoration: none;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: unset;
+    margin-bottom: 4px;
+    transition: all .5s ease;
+    border-radius: 10px;
+}
+
+.sub-header .user-pitch .drop-nav .attach:hover{
+    background: rgb(0,0,0,.2);
+    color: #fff !important;
+}
+
 .sub-header .user-pitch .drop-down i{
     margin-left: .5em;
 } 
 
 .sub-header .user-pitch .avatar{
-    padding: 3px 5px;
+    padding: 2px 10px;
     background: #000;
     border-radius: 3px; 
     color: #fff;
     font-weight: 800;
     margin-right: .5em;
+    text-transform: uppercase;
 }
 
 .sub-header{
@@ -103,6 +158,35 @@
     flex: 0 0 70%;
 }
 
+.hero-section img{
+    position: absolute;
+    right: 2em;
+    bottom: 0%;
+    width: 250px;
+    object-fit: cover;
+    height: 230px;
+    animation: bounce 5s infinite;
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: rotateX(-25deg);
+    }
+    50%{
+        transform: rotateY(-185deg);
+        
+    }
+    70%{
+        transform: rotateY(-45deg);
+        
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
 .preview {
     margin-top: -2em;
     padding: 2em 0;
@@ -110,12 +194,11 @@
 }
 
 .preview .main-card{
-    width: 200px;
     display: flex;
     justify-content: space-between;
-    padding: 10px 1.8em;
+    padding: 8px .8em;
     border-radius: 10px;
-    background: #00b18e6b;
+    background: #7c7e7d41;
     
 }
 
@@ -124,16 +207,15 @@
 }
  */
 
+
 .preview .main-card .icon{
-    padding: .3em 1em;
-    background: rgb(0,0,0,.1);
+    padding: 10px 1.2em;
     display: flex;
     align-items: center; 
     border-radius: 8px;
-    margin-right: 10px;
-    background: #00b18f;
-
-    
+    margin-right: 18px;
+    background: #7c7e7d;
+    color: #fff;
 }
 
 .preview .main-card .icon i{
@@ -141,17 +223,33 @@
     opacity: .6;
 }
 
+
+.preview .follow{
+    background: #ff44005b;
+}
+.preview .follow .icon{
+    background: orangered;
+}
+.preview .following{
+    background: #00b18e52;
+}
+.preview .following .icon{
+    background: #00b18f;
+}
+
+.preview .uploads{
+    background: #007ff550;
+}
+.preview .uploads .icon{
+    background: #007ff5;
+}
+
+
 .text-h1{
     font-size: 30px;
     margin-bottom: .3em;
 }
 
-.hero-section img{
-    position: absolute;
-    right: 2em;
-    bottom: 0%;
-    width: 300px;
-}
 
 .dashboard{
     position: absolute;
@@ -247,4 +345,48 @@
 
 .logBox{
     margin-top: 1em;
+}
+
+
+/* stuni editor page */
+.item-card
+{
+    position: relative;
+    align-items: flex-start;
+ 
+    
+}
+
+.item-card .type-hover{
+    position: absolute;
+    top: 5%;
+    left: -2%;
+    background:#00b18f;
+    padding: 7px 10px;
+}
+.img-card{
+    margin-right: 3em;
+}
+.img-card img{
+    width: 230px;
+    object-fit: cover;
+}
+
+.m-3{
+    margin: 2em 0;
+}
+
+.item-card .focus{
+    padding: 5px 5px;
+}
+
+
+.fix-wrap{
+       flex-flow: row wrap;
+}
+
+
+/* utitility  styles */
+.highlight{
+    color: #00b18f;
 }

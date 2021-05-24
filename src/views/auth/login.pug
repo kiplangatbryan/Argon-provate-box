@@ -33,27 +33,31 @@ html(lang="en")
             .log-container    
                 .logbox 
                     form(action="/login", method="post")
-                        legend Gustuni
-                        .-msg As an artist this is home, the place to earn!
+                        legend.text-center Gustuni
+                        .-msg.text-center As an artist this is home, the place to earn!
 
                         if error.length > 0
                             .error #{error}
 
                         .inputBox.column 
                             label(for="email") Your email  
-                            input(type="email",name="email", placeholder="Your username") 
+                            input(type="email",name="email", placeholder="Your username", required) 
 
-                        .inputBox.column 
+                        .inputBox.column.passwd 
                             label(for="passwd")  Password
-                            input(type="password", name="passwd", placeholder="Your password") 
+                            input(type="password", name="passwd", placeholder="Your password",required) 
 
                         a(class="forgot", href="/forgot-passwd") Forgot password
-                        button(type="submit", class="congress") Join The Team
+                        .action-buttons 
+
+                            button(type="submit", class="congress") Join The Team
                     .action-buttons 
                         span New to Gustuni ?    
                             a(href='/sign-up') Create account 
 
-                    
+    script(src="/vendor/jquerymlib3.1.4.js") 
+    script(src="/vendor/main.js") 
+
 
         
             <!-- header -->

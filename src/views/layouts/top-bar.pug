@@ -1,0 +1,30 @@
+.sub-header
+    .sub-title
+        .text-h1 #{content}
+        .date 
+            span.highlight Monday 
+            span 02 March 2020   
+
+    .side-nav 
+        a(class="a-tag", href="") 
+            i(class="fa fa-envelope")
+        a(class="a-tag", href="") 
+            i(class="fa fa-bell")
+        .user-pitch
+            span.avatar #{user.username[0]}
+            .drop-down 
+                span #{user.username}
+                i(class="fa fa-angle-down")
+                .drop-nav 
+                    a(href="/profile", class="attach") 
+                        i(class="fa fa-user-edit")
+                        span Edit profile
+                    a(href="/profile", class="attach") 
+                        i(class="fa fa-envelope")
+                        span Messages
+                    a(href="/profile", class="attach")
+                        i(class="fa fa-bell")
+                        span Notifications
+                    a(href="/logout", class='attach logout') 
+                        i(class="fa fa-power-off")
+                        span logout

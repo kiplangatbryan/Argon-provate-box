@@ -20,6 +20,7 @@ const UserModel = mongoose.Schema({
         required: true,
         type: String,
     },
+    info: {},
     stats: {},
     resetToken: "",
     resetTokenExpiration: "",

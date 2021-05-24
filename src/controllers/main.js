@@ -5,7 +5,7 @@ const indexPage = (req, res) => {
     res.render('index',
     {
         content: 'dashboard',
-        user: req.session.user.username
+        user: req.session.user
     })
 }
 
@@ -13,7 +13,7 @@ const settingsPage = (req, res) => {
     res.render('settings',
     {
         content: 'Customize your House',
-        user: req.session.user.username,
+        user: req.session.user
 
     })
 }
@@ -21,20 +21,29 @@ const settingsPage = (req, res) => {
 const addTrackPage = (req, res) => {
     res.render('new-stuni', {
         content: 'Upload a new Track',
-        user: req.session.user.username
+        user: req.session.user
 
     })
 }
 
-const editor = (req, res) => {
-    res.render('editor')
+const editor = async(req, res) => {
+
+    const myTracks = await Track.find({ userId: req.user._id })
+    console.log(myTracks)
+    
+    res.render('editor',{
+        content: 'Editor',
+        user: req.session.user,
+        items: myTracks
+    }
+    )
 }
 
 
 const profilePage = (req, res) => {
     res.render('profile',{
         content: 'Your Identity',
-        user: req.session.user.username
+        user: req.session.user
 
     })
 }
@@ -100,6 +109,14 @@ const postTrack = async (req, res, next) => {
 
 }
 
+const postAuthProfile = (req, res) => {
+    res.render('post-auth/profile')
+}
+
+const occupationOptions = (req, res) => {
+    res.render('post-auth/category')
+    
+}
 
 
 module.exports = {
@@ -108,5 +125,7 @@ module.exports = {
     addTrackPage,
     editor,
     profilePage,
-    postTrack
+    postTrack,
+    postAuthProfile,
+    occupationOptions
 }

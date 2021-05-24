@@ -30,6 +30,7 @@
     text-decoration: none;
     margin-left: 1em;
 }
+
 .main-header{
     height: 7vh;
     display: flex;
@@ -37,6 +38,7 @@
     justify-content: space-between;
     padding: 0 6em;
 }
+
 .side-nav span{
     font-size: 14px;
 }
@@ -60,19 +62,20 @@
 }
 
 .log-container {
+    max-height: 93vh;
     height: 93vh;
     flex: 0 0 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
+    overflow-y: auto;
 }
+
 .logbox{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  max-width: 70%;
+  margin: 0 auto;
+    padding: 4em 0;
+
 }   
+
 .logbox .inputBox{
     margin: 1em 0;
 }
@@ -90,6 +93,7 @@
 }
 .logbox .-msg{
     margin-bottom: 2em;
+
 }
 .logbox .forgot{
     display: block;
@@ -97,6 +101,8 @@
     margin: 1em  0;
     text-align: right;
 }
+
+
 .logbox .congress{
     border: unset;
     padding: .5em 3em;
@@ -106,12 +112,34 @@
     cursor: pointer;
     
 }
+
+
 .logbox .action-buttons{
     margin-top: 2em;
+    display: flex;
+    justify-content:center;
 }
 
 .error{
     padding: 1em;
     background-color: #f1481e63;
     color: #f1481e;
+}
+
+/* utility styles */
+.column{
+    display: flex;
+    flex-direction: column;
+}
+.d-flate{
+    padding: 1em;
+    background: rgb(0,0,0,.1);
+    border-radius: 20px;
+    margin-bottom: 1em;
+}
+.subtitle-text{
+    margin-bottom: 8px;
+}
+.text-center{
+    text-align: center;
 }

@@ -9,7 +9,7 @@ html(lang="en")
         title Gustuni | login
     body 
         <!-- header -->
-
+        .my-bar#my-id
         .main-container 
             .dashboard 
                 .logo  stuni
@@ -34,26 +34,13 @@ html(lang="en")
                         span Profile              
                     
 
-        .container 
-            .sub-header
-                .sub-title
-                    .text-h1 #{content}
-                    .date 
-                        span.highlight Monday 
-                        span 02 March 2020   
-
-                .side-nav 
-                    a(class="a-tag", href="") 
-                        i(class="fa fa-envelope")
-                    a(class="a-tag", href="") 
-                        i(class="fa fa-bell")
-                    .user-pitch
-                        span.avatar AJ
-                        .drop-down 
-                            span #{user}
-                            i(class="fa fa-angle-down")
+        
+        .container    
             block content
-     
+    script(src="jquerymlib3.1.4.js") 
+    script(src="nanobar.min.js") 
+    script(src="main.js") 
+
 
                
 

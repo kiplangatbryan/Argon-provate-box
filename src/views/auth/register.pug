@@ -33,11 +33,14 @@ html(lang="en")
             .log-container    
                 .logbox 
                     form(action="/register", method="POST")
-                        legend Gustuni
+                        legend.text-center Gustuni
                         .-msg.text-center A new home for all Kenyan musicians, get your money where your mouth is
 
-                        .speak Security Credentials
+                        if error.length > 0
+                            .error #{error}
+
                         .d-flate
+                            .speak Security Credentials
                             .inputBox.column 
                                 label(for='nationalID') Nation ID*
                                 input(type="number",name="nationalID",placeholder="National ID") 
@@ -52,17 +55,19 @@ html(lang="en")
                                 input(type="text",name="uname" placeholder="Your name")
                                 .subtitle-text This name will appear everywhere.
                             .inputBox.column
-                                label(for="email")  
+                                label(for="email")  Your Email
                                 input(type="email",name="email" placeholder="What's your email") 
                                 .subtitle-text  This email will remain private.
                             .inputBox.column
-                                label(for="passwd")
+                                label(for="passwd") Password
                                 input(type="password", name='passwd',placeholder="Your password") 
                                 .subtitle-text should not be shorter than 6 characters
                         
-                        .subtitle-text.m-2.text-center By clicking on sign-up, you agree to Spotify's Terms and Conditions of Use
+                        .subtitle-text.m-2.text-center.terms By clicking on sign-up, you agree to stuni's Terms and Conditions of Use
+                   
+                        .action-buttons 
 
-                        button(type="submit", class="congress") Join The Team
+                            button(type="submit", class="congress") Join The Team
                     .action-buttons 
                         span Already have and Account ?    
                             a(href='/sign-in') Login 

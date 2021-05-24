@@ -1,42 +1,51 @@
 extends layouts/main.pug
 block content
-    .hero-section 
-        .rim1 
-            .text-h1 Hi, Jane
-            .text-1 Ready to start your day some pitch decks 
-        .img 
-            img(src="/images/locate.svg", alt="")
+    include layouts/top-bar.pug
+    .grid-space
+        
+        .hero-section 
+            .rim1 
+                .text-h1 Hi, #{user.username}
+                .text-1 Ready to start your day some pitch decks 
+            .img 
+                img(src="/images/locate.svg", alt="")
 
-    .text-h1 Public Profile
-    .accout-form 
-        form(action="/account-update", method="post")
-            .secondary-text Account
-            .subtitle-text sensitive info here be careful
-            .d-flex 
+        .text-h1 Public Profile
+        .accout-form 
+            form(action="/account-update", method="post")
+                .secondary-text Account
+                .subtitle-text sensitive info here be careful
+                .d-flex 
+                    .inputBox.column
+                        label Name
+                        input(type="text",name="name", value=`${user.username}`, )
+                    .inputBox.column
+                        label Your email
+                        input(type="email",name="email", value=`${user.email}`)
+                .secondary-text.m-2 General 
+                .subtitle-text Lets get to know you better
                 .inputBox.column
-                    label Name
-                    input(type="text",name="name", value="Jane Doe", )
+                    label Location
+                    input(type="text",value=`${user.twitter}`, name="location")
+                    .subtitle-text What is your current residence
+                
                 .inputBox.column
-                    label Your email
-                    input(type="email",name="email", value="Janedoe@gmail.com")
-            .secondary-text.m-2 General 
-            .subtitle-text Lets get to know you better
-            .inputBox.column
-                label Location
-                input(type="email",value="", name="location")
-            .inputBox.column
-                label Bio
-                textarea(name="bio", cols="20", rows="6")
-            .d-flex 
-                .inputBox.column
-                    label Twitter Username
-                    input(type="email",value="", name="twitter")
-                .inputBox.column
-                    label Instagram username
-                    input(type="email",value="", name="instagram") 
-            
+                    label Bio
+                    .subtitle-text Tell us something about yourself
+                    textarea(name="bio", id="bio-text", ,cols="20", rows="6", placeholder="Who are you")
+                    script 
+                        const text = document.getElementById('bio-text')
+                        text.value += user.bio
+                .d-flex 
+                    .inputBox.column
+                        label Twitter Username
+                        input(type="text",value=`${user.twitter}`,placeholder="twitter username", name="twitter")
+                    .inputBox.column
+                        label Instagram username
+                        input(type="text",value=`${user.twitter}`, name="instagram", placeholder="instagram username") 
+                
 
-            button.submit-btn(type="submit") Update profile 
+                button.submit-btn(type="submit") Update profile 
 
 
 

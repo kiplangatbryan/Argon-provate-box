@@ -3,6 +3,7 @@ const UserModel  = require('../Models/User')
 const bcrypt = require('bcryptjs')
 
 const login = (req, res) => {
+    console.log('requested login')
     return res.render('auth/login', {
         content: 'Welcome back',
         isAuthentificated: req.session.isAuth,
@@ -39,14 +40,20 @@ const postRegister = async (req, res, next) => {
                email,
                nationalID,
                number,
-         password: hashedCode,
+               password: hashedCode,
+               stats: {
+                   listens: 0,
+                   followers: [],
+                   following: [],
+                }
            }
        )
        await userDoc.save()
        
-       req.session.user = user
+      
+        req.session.user = user
         req.session.isAuth = true
-       req.session.save((err) => console.log(err))
+        req.session.save((err) => console.log(err))
        console.log('user creation successfull')
     //    send them an email immediately
        
@@ -66,7 +73,7 @@ const postRegister = async (req, res, next) => {
 
        req.flash("success", "Account created successfully")
 
-        return res.status(200).redirect("/")
+        return res.redirect("/")
 
    
    } catch (err) {
