@@ -10,6 +10,7 @@ npm install
 ```
 npm run dev
 ```
+```
 # images
 ![Screenshot 2021-06-08 at 00-15-44 Stuni Occupation](https://user-images.githubusercontent.com/55278664/121141403-c3bd3400-c7ef-11eb-9496-7337e78ee9cd.png)
 
