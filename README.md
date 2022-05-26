@@ -1,16 +1,18 @@
 # gustuni_creators_portal
 
-This is a portal that allows creators - musicians, producers 
-to manage and upload content to the gustuni platform 
+This is a platform that allows creators - musicians, producers 
+to manage and upload content to the gustuni platform where it is showcased for consumers to celebrate and enjoy by paying a small fee.
 
 
 ## Project setup
 ```
 npm install
 ```
+
+```
 npm run dev
 ```
-```
+
 # images
 ![Screenshot 2021-06-08 at 00-15-44 Stuni Occupation](https://user-images.githubusercontent.com/55278664/121141403-c3bd3400-c7ef-11eb-9496-7337e78ee9cd.png)
 
