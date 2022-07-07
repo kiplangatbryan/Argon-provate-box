@@ -1,7 +1,6 @@
 # gustuni_creators_portal
 
-This is a platform that allows creators - musicians, producers 
-to manage and upload content to the gustuni platform where it is showcased for consumers to celebrate and enjoy by paying a small fee.
+This is a private repository that allows content creators, or anyone with private information to store their for safe-keeping and be able to easily gain access securely.
 
 
 ## Project setup
